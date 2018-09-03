@@ -1,0 +1,67 @@
+<div ng-if="currentUser">
+	<p class="text-info">Unirse a una batalla!</p>
+	<div id="page-wrapper" class="clearfix" ng-controller="CompetenciasCtrl">
+		<!-- popup para seleccionar con que robot voy a combatir -->
+		<script type="text/ng-template" id="seleccionarrobot.html">
+	    <div class="modal-header">
+          	<img src="img/guerra-coders-popup-457-64.png" />
+	    </div>
+	    <div class="modal-body">
+	    	<label>Estas a punto de unirte a la batalla {{arenaName}}</label></p>
+	    	<p><label>Elije el robot</label></p>
+            <ul>
+                <li ng-repeat="r in myrobots">
+                    <a ng-click="selected.r = r">{{ r.name }}</a>
+                </li>
+            </ul>
+            <br>
+            <label>Luchar con: {{ selected.r.name }}</label>
+	    </div>
+	    <div class="modal-footer">
+	        <button class="button" ng-click="ok(selected)">Unirme a la batalla</button>
+	        <button class="button" ng-click="cancel()">Cancelar</button>
+	    </div>
+	    </script>
+	    <!--
+	    <div ng-bind-html="competenciasHtmlOut"></div>
+		-->
+		<div>
+			<table class="table-competencias">
+				<tr>
+					<td colspan="4"><label>Eleg&iacute; una de las batallas disponibles y hac&eacute; clic en 'Luchar en la batalla'</label></td>
+				</tr>
+				<tr>
+					<td colspan="4">&nbsp;</td>
+				</tr>
+				<tr>
+					<td><label>Batalla</label></td>
+					<td><label>Robots</label></td>
+					<td><label>Estado</label></td>
+					<td><label>Luchar en</label></td>
+				</tr>
+
+				<tr ng-repeat="arena in arenas">
+					<td><label>{{arena.name}}</label></td>
+					<td><label>{{arena.robots.length}}</label></td>
+					<td>
+						<label ng-if="arena.status == 'initialized'">
+							No hay guerreros en esta la batalla. Se el primero.
+						</label>
+						<label ng-if="arena.status == 'started'">
+							Esperando mas guerreros para la batalla.
+						</label>
+						<label ng-if="arena.status == 'fighting'">
+							Luchando en este momento.
+						</label>
+						<label ng-if="arena.status == 'closed'">
+							Batalla no disponible.
+						</label>
+					</td>
+					<td>
+						<button ng-disabled="arena.status == 'closed' || arena.status == 'fighting'" ng-if="arena.robots.length < 8" ng-click="open(arena._id, arena.name)" class="button">{{arena.name}}</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

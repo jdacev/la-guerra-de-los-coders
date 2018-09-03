@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/jetty-server-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-servlet-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-http-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-util-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-io-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-common.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-server.jar"/>
+	<classpathentry kind="lib" path="lib/javax.ws.rs-api-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-security-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/hk2-utils-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/hk2-api-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-guava-2.7.jar"/>
+	<classpathentry kind="lib" path="lib/javax.inject-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/hk2-locator-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="lib/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-client.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-media-json-processing-2.7.jar"/>
+	<classpathentry kind="lib" path="lib/jsonp-jaxrs-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/javax.json-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-webapp-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-container-jetty-http-2.7.jar"/>
+	<classpathentry kind="lib" path="lib/jetty-continuation-9.1.3.v20140225.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-media-moxy-2.7.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-entity-filtering-2.7.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.persistence.moxy_2.5.1.v20130918-f2b9fc5.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.persistence.core_2.5.1.v20130918-f2b9fc5.jar"/>
+	<classpathentry kind="lib" path="lib/gfnexus-maven-plugin-0.16.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.persistence.antlr-2.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/codesize-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/picocontainer-2.14.2.jar"/>
+	<classpathentry kind="lib" path="lib/robocode.battle-1.9.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/robocode.core-1.9.2.1.jar" sourcepath="/robocode.core"/>
+	<classpathentry kind="lib" path="lib/robocode.host-1.9.2.1.jar" sourcepath="/robocode.host"/>
+	<classpathentry kind="lib" path="lib/robocode.jar" sourcepath="/robocode.api"/>
+	<classpathentry kind="lib" path="lib/robocode.repository-1.9.2.1.jar" sourcepath="/robocode.repository"/>
+	<classpathentry kind="lib" path="lib/robocode.sound-1.9.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/robocode.ui.editor-1.9.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/roborumble.jar"/>
+	<classpathentry kind="lib" path="lib/robocode.ui-1.9.2.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/robocode.ui"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

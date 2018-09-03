@@ -1,0 +1,31 @@
+		<div id="container" ng-controller="AppCtrl">
+			<h1>Registro</h1>
+			<form name="appForm" novalidate class="app-form">
+				<label>Nombre</label>
+				<input type="text" name="firstName" ng-model="user.firstName" required />
+				<span ng-show="appForm.firstName.$dirty && appForm.firstName.$error.required">Ingresa el Nombre</span>
+				<br />
+
+				<label>Apellido</label>
+				<input type="text" name="lastName" ng-model="user.lastName" required />
+				<span ng-show="appForm.lastName.$dirty && appForm.lastName.$error.required">Ingresa el Apellido</span>
+				<br />
+
+				<label>Email</label>
+				<input type="email" name="email" ng-model="user.email" required />
+				<span ng-show="appForm.email.$dirty && appForm.email.$error.required">Requerido: Tell us your email address</span> <span ng-show="appForm.email.$dirty && appForm.email.$error.email">La direccion de correo electronico no es válida</span>
+				<br />
+
+				<label>Genero</label>
+				<br>
+				<div>
+					<input type="radio" name="gender" ng-model="user.gender" value="male"><label>Masculino</label>
+				</div>
+				<div>
+					<input type="radio" name="gender" ng-model="user.gender" value="female"><label>Femenino</label>
+				</div>
+				<br />
+				<button ng-click="save()">Aceptar</button>
+			</form>
+			<div ng-show="master">{{master | json}}</div>
+		</div>

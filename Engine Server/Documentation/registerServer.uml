@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_InUTMMTLEeOm2pCQp8q7hg" name="model">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_InU6QMTLEeOm2pCQp8q7hg" name="Interaction1">
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_V7jJYMTLEeOm2pCQp8q7hg" name="MessageSend" covered="_PTMVUMTLEeOm2pCQp8q7hg" message="_V7h7QMTLEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_UgT6cMTLEeOm2pCQp8q7hg" name="ActionExecSpec0" covered="_Q0Uw4MTLEeOm2pCQp8q7hg" finish="_ZwzjsMTLEeOm2pCQp8q7hg" start="_V7jwcMTLEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_UEAY8cTLEeOm2pCQp8q7hg" name="ActionExecSpec" covered="_PTMVUMTLEeOm2pCQp8q7hg" finish="_ZwzjscTLEeOm2pCQp8q7hg" start="_V7jJYMTLEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_V7jwcMTLEeOm2pCQp8q7hg" name="MessageRecv" covered="_Q0Uw4MTLEeOm2pCQp8q7hg" message="_V7h7QMTLEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZwzjsMTLEeOm2pCQp8q7hg" name="MessageSend0" covered="_Q0Uw4MTLEeOm2pCQp8q7hg" message="_Zwy8oMTLEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZwzjscTLEeOm2pCQp8q7hg" name="MessageRecv0" covered="_PTMVUMTLEeOm2pCQp8q7hg" message="_Zwy8oMTLEeOm2pCQp8q7hg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_PTMVUMTLEeOm2pCQp8q7hg" name="EngineServer" coveredBy="_UEAY8cTLEeOm2pCQp8q7hg _V7jJYMTLEeOm2pCQp8q7hg _ZwzjscTLEeOm2pCQp8q7hg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Q0Uw4MTLEeOm2pCQp8q7hg" name="WS" coveredBy="_UgT6cMTLEeOm2pCQp8q7hg _V7jwcMTLEeOm2pCQp8q7hg _ZwzjsMTLEeOm2pCQp8q7hg"/>
+    <message xmi:type="uml:Message" xmi:id="_V7h7QMTLEeOm2pCQp8q7hg" name="RegisterServer" receiveEvent="_V7jwcMTLEeOm2pCQp8q7hg" sendEvent="_V7jJYMTLEeOm2pCQp8q7hg"/>
+    <message xmi:type="uml:Message" xmi:id="_Zwy8oMTLEeOm2pCQp8q7hg" name="OK" messageSort="reply" receiveEvent="_ZwzjscTLEeOm2pCQp8q7hg" sendEvent="_ZwzjsMTLEeOm2pCQp8q7hg"/>
+  </packagedElement>
+</uml:Model>

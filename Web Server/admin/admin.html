@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.dataTables.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css" />
+        <title>Admin</title>
+    </head>
+    <body>
+        <h1>Admin Page</h1>
+        <script>
+            var socket = io();
+            socket.on('result', function(msg){
+                alert(JSON.stringify(msg));
+            });
+        </script>
+        <fieldset>
+            <legend>Arenas</legend>
+            <table id="arenas" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Engines</legend>
+            <table id="engines" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+            </table>
+        </fieldset>
+        <script type="text/javascript">
+            function deleteArena(id){
+                $.ajax({
+                  type: "DELETE",
+                  url: "http://localhost:8000/arena/" + id
+                })
+                  .done(function( msg ) {
+                    $('#arenas').dataTable().draw();
+                  });
+            };
+
+            function deleteEngine(id){
+                $.ajax({
+                  type: "DELETE",
+                  url: "http://localhost:8000/engine/" + id
+                })
+                  .done(function( msg ) {
+                    $('#engines').dataTable().draw();
+                  });
+            };
+
+            $(document).ready(function() {
+
+                $('#arenas').dataTable( {
+                    "ajax": { "url" : 'http://localhost:8000/arenas',
+                              "dataSrc": ''
+                          },
+                    "columnDefs": [
+                        { "targets": 0, "data": "name" },
+                        { "targets": 1, "data": null, "render" : function( data, type, row, meta ){
+                                return "<button onclick='deleteArena(\""+data._id+"\")'>Borrar</button>";
+                        }}
+                    ]
+                } );
+
+                 $('#engines').dataTable( {
+                    "ajax": { "url" : 'http://localhost:8000/engines',
+                              "dataSrc": ''
+                          },
+                    "columnDefs": [
+                        { "targets": 0, "data": "nombre" },
+                        { "targets": 1, "data": null, "render" : function( data, type, row, meta ){
+                                return "<button onclick='deleteEngine(\""+data._id+"\")'>Borrar</button>";
+                        }}
+                    ]
+                } );
+
+            } );
+        </script>
+    </body>
+</html>

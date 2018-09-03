@@ -1,0 +1,70 @@
+<div ng-if="currentUser">
+	<p class="text-info">Crear robot</p>
+	<div id="page-wrapper" class="clearfix" ng-controller="CrearBotsCtrl">
+		<form name='crearRobotForm'>
+			<table width="100%" cellpadding="0" cellspacing="0">
+				<tr>
+					<td valign="top" width="60%">
+						<table id="tabla" width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td><label>Tipo de robot</label></td>
+								<td>
+									<div class="field">
+										<select ng-model="robotType" ng-options="r.nombre for r in tiposRobot" class="option-font" ng-change="showRobotProperties(robotType)" />
+									</div>
+								</td>
+								<td>
+									<!--<button ng-if="robotProperties" ng-click="openRobotProperties($event, robotType.id)">Detalles del robot</button>-->
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td><label>Nombre</label></td>
+								<td><div class="field"><input ng-model='nombre' maxlength="25" required></div></td>
+								<td><label>Nombre del Robot</label></td>
+							</tr>
+							<tr>
+								<td><label>Color del tanque</label></td>
+								<td><div class="field"><select ng-model="colorBody" ng-options="c.nombre for c in colores" class="option-font" required /></div></td>
+								<td><label>m&eacute;todo: setBodyColor();</label></td>
+							</tr>
+							<tr>
+								<td><label>Color del arma</label></td>
+								<td><div class="field"><select ng-model="colorGun" ng-options="c.nombre for c in colores" class="option-font" required /></div></td>
+								<td><label>m&eacute;todo: setGunColor();</label></td>
+							</tr>
+							<tr>
+								<td><label>Color del radar</label></td>
+								<td><div class="field"><select ng-model="colorRadar" ng-options="c.nombre for c in colores" class="option-font" required /></div></td>
+								<td><label>m&eacute;todo: setRadarColor();</label></td>
+							</tr>
+							<tr>
+								<td><label>Color de las balas</label></td>
+								<td><div class="field"><select ng-model="colorBullet" ng-options="c.nombre for c in colores" class="option-font" required /></div></td>
+								<td><label>m&eacute;todo: setBulletColor();</label></td>
+							</tr>
+							<tr>
+								<td><label>Color del scanner</label></td>
+								<td><div class="field"><select ng-model="colorScanner" ng-options="c.nombre for c in colores" class="option-font" required /></div></td>
+								<td><label>m&eacute;todo: setScannerColor();</label></td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<button ng-click='crearRobot()' ng-disabled='!crearRobotForm.$valid' class="button">Crear robot</button>
+								</td>
+							</tr>
+						</table>
+						<br/><br/>
+					</td>
+					<td width="40%">
+						<table ng-if="robotProperties" width="100%" cellpadding="0" cellspacing="0">
+							<tr>
+								<td ng-bind-html="htmlOut"></td></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>

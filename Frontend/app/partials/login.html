@@ -1,0 +1,29 @@
+<div id="page-wrapper-login" class="clearfix" ng-controller="LoginCtrl">
+	<p class="text-info">Jugar a la guerra de los coders</p>
+	<form name='loginForm'>
+		<table id="tabla" width="100%">
+			<tr>
+				<td><label>Nombre o apodo</label></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="field">
+						<input ng-model="user.nombre" type="text" id="nombre" required />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Correo electr&oacute;nico</label></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="field"><input ng-model="user.email" type="email" id="email" required /></div>
+				</td>
+			</tr>
+			<tr>
+		</table>
+		<div>
+			<button class="button" ng-click='loginRobocode()' ng-disabled='!loginForm.$valid'>Entrar</button>
+		</div>
+	</form>
+</div>

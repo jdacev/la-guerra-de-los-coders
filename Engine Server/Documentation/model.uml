@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_ZWRS4MTCEeOm2pCQp8q7hg" name="model">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_Zh2QwMTCEeOm2pCQp8q7hg" name="Login">
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_941pMMTIEeOm2pCQp8q7hg" name="MessageSend" covered="_lH01YMTCEeOm2pCQp8q7hg" message="_941CIMTIEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_-yLhcMTHEeOm2pCQp8q7hg" name="ActionExecSpec" covered="_lH01YMTCEeOm2pCQp8q7hg" finish="_GukTwcTJEeOm2pCQp8q7hg" start="_941pMMTIEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="__NRiAcTHEeOm2pCQp8q7hg" name="ActionExecSpec0" covered="_mY6p0MTCEeOm2pCQp8q7hg" finish="_GukTwMTJEeOm2pCQp8q7hg" start="_9423UMTIEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9423UMTIEeOm2pCQp8q7hg" name="MessageRecv" covered="_mY6p0MTCEeOm2pCQp8q7hg" message="_941CIMTIEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GukTwMTJEeOm2pCQp8q7hg" name="MessageSend0" covered="_mY6p0MTCEeOm2pCQp8q7hg" message="_GujssMTJEeOm2pCQp8q7hg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GukTwcTJEeOm2pCQp8q7hg" name="MessageRecv0" covered="_lH01YMTCEeOm2pCQp8q7hg" message="_GujssMTJEeOm2pCQp8q7hg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_lH01YMTCEeOm2pCQp8q7hg" name="UI" coveredBy="_-yLhcMTHEeOm2pCQp8q7hg _941pMMTIEeOm2pCQp8q7hg _GukTwcTJEeOm2pCQp8q7hg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_mY6p0MTCEeOm2pCQp8q7hg" name="WS" coveredBy="__NRiAcTHEeOm2pCQp8q7hg _9423UMTIEeOm2pCQp8q7hg _GukTwMTJEeOm2pCQp8q7hg"/>
+    <message xmi:type="uml:Message" xmi:id="_941CIMTIEeOm2pCQp8q7hg" name="Login(name,email)" receiveEvent="_9423UMTIEeOm2pCQp8q7hg" sendEvent="_941pMMTIEeOm2pCQp8q7hg"/>
+    <message xmi:type="uml:Message" xmi:id="_GujssMTJEeOm2pCQp8q7hg" name="OK" messageSort="reply" receiveEvent="_GukTwcTJEeOm2pCQp8q7hg" sendEvent="_GukTwMTJEeOm2pCQp8q7hg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_n-hjcMTHEeOm2pCQp8q7hg" name="UI">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ysds0MTHEeOm2pCQp8q7hg" name="Login"/>
+  </packagedElement>
+</uml:Model>

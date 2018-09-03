@@ -1,0 +1,55 @@
+<div ng-if="currentUser">
+  <p class="text-info">Mis robots</p>
+  <div id="page-wrapper" class="clearfix" ng-controller="MisBotsCtrl">
+    <!-- popup para confirmar la eliminacion de un robot -->
+    <script type="text/ng-template" id="borrar-robot.html">
+      <div class="modal-header">
+          <img src="img/guerra-coders-popup-457-64.png" />
+      </div>
+      <div class="modal-body">
+        <label>¿Estas seguro que queres borrar el robot {{robotName}}?</label></p>
+      </div>
+      <div class="modal-footer">
+          <button class="button" ng-click="ok()">Aceptar</button>
+          <button class="button" ng-click="cancel()">Cancelar</button>
+      </div>
+      </script>
+      <form id="file-form">
+        <div class="field">
+          <label>Nombre de la clase del robot</label>
+          <input type="text" ng-model="fileName" readonly />
+          <input ng-model="idRobot" type="hidden" />
+        </div>
+        <div class="field">
+          <label>C&oacute;digo fuente del Robot</label>
+          <textarea ng-model="file"></textarea>
+        </div>
+        <div class="field">
+          <button class="button" ng-click='updateRobot()'>Guardar</button>
+        </div>
+      </form>
+      <div id="files">
+        <label>Mis Robots</label>
+        <ul id="file-list">
+            <li ng-repeat="robot in myrobots">
+              
+              <a ng-click="populateRobotData(robot.file, robot.fileName, robot._id)" class="edit-file">
+                
+                <!-- ROBOT CON ERRORES DE COMPILACION. NO SE MUESTRA EN LA LISTA DE ROBOTS PARA LA BATALLA -->
+                <img ng-src="img/robots/warning-robot.png" ng-if="robot.status=='fail'" width="32" height="32" style="vertical-align:middle" title="La clase no se compiló correctamente. No vas a poder competir con este robot hasta no arreglar el código." />
+                
+                <!-- ROBOT COMPILADO Y APTO PARA LA BATALLA -->
+                <img ng-src="img/robots/red-robot.jpg" ng-if="robot.status=='ok'" width="32" height="32" style="vertical-align:middle" />
+                
+                <span class="text-small">{{robot.name}}</span>
+              </a>
+
+              <a ng-click="deleteRobot(robot._id, robot.name)">
+                <img ng-src="img/robots/delete-robot.png" width="16" height="16" style="vertical-align:middle" />
+              </a>
+
+            </li>
+        </ul>
+      </div>
+  </div>
+</div>

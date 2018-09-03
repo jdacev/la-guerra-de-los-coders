@@ -1,0 +1,25 @@
+database mongodb (pararse donde este instalada la base de datos mongoDB o meter en el classpath la ruta de mongo)
+el dbpath puede indicarse con cualquier otra ruta, total la primera vez crea la base donde le indiquemos.
+por ejemplo C:\mongodb\data
+cd C:\Program Files\MongoDB 2.6 Standard\bin
+
+luego correr
+mongod.exe --dbpath C:\robocode-db\mongodb\data
+
+server nodejs
+cd C:\Digital Technologies\tecnopolis-robocode\Web Server
+
+luego correr
+node server.js
+
+engine server
+cd C:\engine Server
+luego correr
+runServer.bat
+
+
+---de donde bajar mongoDB
+http://www.mongodb.org/downloads
+
+---de donde bajar nodejs
+http://nodejs.org/
